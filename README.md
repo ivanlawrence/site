@@ -1,12 +1,10 @@
-# Hello, World!
-Welcome to my little corner of the web — a place where I tinker with code, build tiny projects, and play with little experiments! 
+# Site - My Website
+This repository contains the source code for my website, which you can visit [here](https://connor.thel4.com)!
 
-This is the GitHub repo holding all the code for my website, which you can find [here](https://connor.thel4.com)!
+It's just a fun little portfolio for my current projects, so feel free to poke around, try to break it (let me know if you do), and have fun!
 
-Feel free to poke around, try things out, and have fun! :)
-
-## Some small details:
-* All `HTML`, `JS`, and `CSS` (for now!)
-* Dark Mode, because we all know dark mode is simply better
-* Mobile-friendly... Through much pain and suffering...
-* Entirely for fun — zero stress, zero pressure... and zero quality 
+## Details
+* Built entirely with `HTML`, `JS`, and `CSS` (for now!)
+* Mobile-friendly... through an unreasonable amount of CSS-related suffering
+* Dark mode, because as we all know, dark mode is the best
+* Made purely for fun — zero stress, zero pressure, and zero quality!

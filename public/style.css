@@ -1,159 +1,142 @@
+/*body * {
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+}*/
+
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: black;
-    color: white;
-    font-family: monospace;
     font-size: 1rem;
-    padding: 10px 20px;
-}
-
-/* ----- Element Defaults ----- */
-
-button, input, select, textarea {
-    background-color: black;
     color: white;
-    font-size: 16px;
     font-family: monospace;
-    border: 1px solid deepskyblue;
-    border-radius: 5px;
-    padding: 8px 8px;
-    transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
-}
-
-button::placeholder, input::placeholder, select::placeholder, textarea::placeholder {color: silver;}
-
-/* ----- Element Actions ----- */
-
-button:hover, input:hover, select:hover, textarea:hover {
-    background-color: deepskyblue;
-    color: black;
-    border: 1px solid black;
-    transition: background 0.2s ease;
-}
-
-a {color: skyblue; text-decoration: none;}
-
-a:hover {color: white; font-weight: bold;}
-
-button:hover, select:hover, a:hover {cursor: pointer;}
-
-input:hover::placeholder, select:hover::placeholder, textarea:hover::placeholder {color: black;}
-
-input:focus, select:focus, textarea:focus {
-    background-color: black;
-    color: deepskyblue;
-    border: 1px solid deepskyblue;
-    transition: background 0.2s ease;
-}
-
-input:focus::placeholder, select:focus::placeholder, textarea:focus::placeholder {color: black;}
-
-button:active {
-    background-color: black;
-    color: white;
-    border: 1px solid deepskyblue;
-    transition: background 0s ease;
-}
-
-/* ----- Footer Defaults ----- */
-
-footer p {
-    color: dimgray;
-    font-size: 10px;
-    bottom: 0;
-    padding: 10px 0;
-    position: fixed;
-}
-
-/* ----- Menu Button Defaults----- */
-
-.menu-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: black;
-    border: 1px solid deepskyblue;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 2;
-    transition: background 0.2s ease;
-}
-
-.menu-button span {
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: skyblue;
-    transition: 0.2s ease;
-}
-
-.menu-button span:nth-child(1) {top: 16px;}
-.menu-button span:nth-child(2) {top: 25px;}
-.menu-button span:nth-child(3) {top: 34px;}
-
-/* ----- Menu Button Actions ----- */
-
-.menu-button:hover {background: deepskyblue;}
-
-.menu-button:hover span {background: black;}
-
-.menu-button.active span:nth-child(1) {top: 25px; transform: rotate(45deg);}
-.menu-button.active span:nth-child(2) {opacity: 0;}
-.menu-button.active span:nth-child(3) {top: 25px; transform: rotate(-45deg);}
-
-/* ----- Menu Defaults ----- */
-
-.menu {
-    position: absolute;
-    bottom: 80px;
-    right: 20px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: black;
-    border: 1px solid deepskyblue;
-    border-radius: 15px;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease, opacity 0.2s ease;
-    transform-origin: bottom right;
-    width: max-content;
-    min-width: 100px;
-    text-align: right;
-    z-index: 1;
 }
 
-.menu.active {max-height: 500px; opacity: 1;}
+main {
+    flex: 1;
+}
 
-.menu a {color: skyblue; padding: 15px 20px; transition: background 0.2s ease;}
+.blue {
+    color: deepskyblue;
+}
 
-.menu a:hover {color: white;}
+.red {
+    color: crimson;
+}
 
-@media (min-width: 768px) {
+.gray {
+    color: slategray;
+}
 
-    .menu-button {display: none;}
+.white {
+    color: white;
+}
 
-    .menu {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        max-height: none;
-        opacity: 1;
-        border: none;
-        width: 100%;
-        max-width: 800px;
-        margin-left: 0px;
-        text-align: center;
-        transform: none;
-        padding: 0;
+nav {
+    font-size: 1.5rem;
+    margin: 3rem 5rem;
+    gap: 7rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+section {
+    padding-top: 6rem;
+    gap: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+#title {
+    font-size: 7rem;
+    font-weight: normal;
+}
+
+#subtitle {
+    font-size: 2rem;
+    color: deepskyblue;
+}
+
+#right-column {
+    width: fit-content;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+ul {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+footer {
+    color: slategray;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 12px;
     }
 
-    .menu a {padding: 10px; color: skyblue; font-size: 16px; text-decoration: none;}
+    nav {
+        font-size: 1.3rem;
+        margin: 2rem 0.5rem;
+        gap: 0rem;
+        justify-content: space-evenly;
+    }
 
-    .menu a:hover {color: white; background: transparent; font-weight: bold;}
+    section {
+        padding-top: 0rem;
+        gap: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #title {
+        font-size: 5rem;
+    }
+
+    #subtitle {
+        font-size: 1.5rem;
+    }
+
+    #right-column {
+        padding-right: 0;
+    }
+
+    h2 {
+        padding-right: 1rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
+
+    footer {
+        padding-right: 0;
+        text-align: center;
+    }
 }
